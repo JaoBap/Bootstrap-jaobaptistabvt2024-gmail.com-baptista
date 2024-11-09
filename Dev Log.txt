@@ -1,0 +1,37 @@
+jaobaptistabvt2024@gmail.com - Bootstrap dev log
+11/1/2024
+6PM - 7PM: 
+Started creating sketches based on other popular email sites.
+Created 3 sketch Ideas to start off with
+
+11/2/2024
+12PM - 1PM:
+Started drafting wire frames for the sketches created.
+3PM - 4PM:
+Finished wireframes
+
+11/3/2024
+1:30PM - 2PM:
+Made repository and started first draft
+
+11/4/2024
+10AM - 12:15PM
+Begun converting wireframes to drafts in vs code
+Laid out grids
+Created draw of first row
+Created category left side draw
+
+11/5/2024
+9:AM - 10:30AM
+Begun working on email list and email composing window
+Finished draft of email list and email composing window
+
+11/8/2024
+8:AM-9:AM
+Computer did not push to save the bootstrap html, the email list and composing window additions were lost
+Remade email and email view/construct grid
+11:AM-12:20PM
+Refining email list and composition window
+Fixed resizing issues
+Composed code to be in line with project requirements
+Fixed github push issue
