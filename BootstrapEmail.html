@@ -5,6 +5,7 @@
       grid-template-rows: 9vh auto;
       grid-template-columns: 5vw 69vw 25vw;
       font-family: Arial, Helvetica, sans-serif;
+      color: rgb(255, 255, 255);
     }
     .Item-1 {
       background-color: rgb(44, 44, 44);
@@ -37,7 +38,7 @@
     }
     .Item-6 {
       display:grid;
-      grid-template-rows: 3vh 3vh 76vh 5vh;
+      grid-template-rows: 3vh 3vh 79vh 5vh;
     }
     .Email { 
       background-color: rgb(27, 27, 27);
@@ -55,6 +56,7 @@
       height: 4vh;
       font-size: auto;
       overflow: hidden;
+      color: rgb(189, 189, 189);
     }
     .input {
       min-width: 20vw;
@@ -66,6 +68,8 @@
 
 <html>
 <body class="container">
+    <!-- Variables -->
+
     <!--Row 1 -->
     <div class="Item-1">The Den Email</div>
     <!-- search grid -->
@@ -90,16 +94,59 @@
     </div>
     <!-- Email List -->
     <div class="Item-5">
-      <div> <button class="Email"> Car loans approved fast! Click for more info </button> </div>
-      <div> <button class="Email"> Mr Snuffle Puff is counting on you for his vote, do you have what it takes? Time is running out and we need your vote. Vote today! We are running out of time and can use your vote to defeat  Raffle Flaffle in running for relection.</button> </div>
-      <div> <button class="Email"> Hello I'm a nigerian prince in dire need of finnanical help. please, my family </button> </div>
+      <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
+        data-sender="SketchyInsurance" value="Limited time offer! Car loans being offered at intrest rate of 10000%!" 
+        >Car loans approved fast! Click for more info </button> </div>
+
+      <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
+        data-sender="ElectionGuy" value="Time is running out and we need your vote. Vote today! We are running out of time and can use your vote to defeat  Raffle Flaffle in running for relection."
+        >Mr Snuffle Puff is counting on you for his vote, do you have what it takes? </button> </div>
+        
+      <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
+        data-sender="NigerianPrinceScam" value=" <!Scam Alert!> The Nigerian prince scam is a type of advance-fee scam, which is named after Section 419 of the Nigerian Criminal Code. The goal of these scams is to gain access to your personal information or infect your device with malware. With access to your email, a hacker can impersonate you and commit identity theft.<!Scam Alert!> Content Deleted"
+        >Hello I'm a nigerian prince in dire need of finnanical help. please, my family </button> </div>
     </div>
     <!-- Email View/Create-->
     <div class="Item-6">
-      <input placeholder="Title" class="input">
-      <input placeholder="Recipients" class="input">
-      <textarea placeholder="Content" class="input"></textarea>
-      <div> <button class="tab"> Reply</button> <button class="tab"> Delete </button> <button class="tab"> Forward</button></div>
+      <input placeholder="Title" class="input" id="title">
+      <input placeholder="Recipients" class="input" id="contacts">
+      <textarea placeholder="Content" class="input" id="content"></textarea>
+      <div> 
+        <button class="tab" onclick="clearComposeGrid()"> Reply</button> 
+        <button class="tab" onclick="deleteEmail()"> Delete </button> 
+        <button class="tab"> Forward</button></div>
     </div>
 </body>
+<!-- Scripts for functions -->
+<script> 
+/* Change compose grid title */
+  function changeTitle(button) {
+    const inputField = document.getElementById("title");
+    inputField.value = button.textContent;
+  }
+  /* Add recipients in compose grid to self */
+  function changeRecipientsReciever() {
+    const inputField = document.getElementById("contacts");
+    inputField.value += "example@me.com";
+  }
+  /* Add sender before reciever */
+  function changeRecipientsSender(button) {
+    const inputField = document.getElementById("contacts");
+    inputField.value = button.dataset.sender + " to ";
+  }
+  /* Change content to of email */
+  function changeContent(button) {
+    const inputField = document.getElementById("content");
+    inputField.value = button.value;
+  }
+  /* Clear compose grid inputs */
+  function clearComposeGrid() {
+    const titleInput = document.getElementById("title");
+    titleInput.value = "";
+    const contactsInput = document.getElementById("contacts");
+    contactsInput.value = "";
+    const contentInput = document.getElementById("content");
+    contentInput.value = "";
+  }
+</script>
 </html>

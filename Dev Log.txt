@@ -35,3 +35,13 @@ Refining email list and composition window
 Fixed resizing issues
 Composed code to be in line with project requirements
 Fixed github push issue
+
+11/10/2024
+4:PM-6:PM
+Made theme more readable and visually pleasing
+Created drafts for responsitity.
+- Clicking email puts it in appropriate text boxes on right and adds from box to left of title text box.
+- Clicking reply clears text boxes and auto sets recipients
+- Clicking categories loads different email lists
+- Search box works
+Finished clicking email to show up in correct grids
