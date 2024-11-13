@@ -1,152 +1,84 @@
-<style>
-    .container {
-      background-color: rgb(0, 0, 0);
-      display: grid;
-      grid-template-rows: 9vh auto;
-      grid-template-columns: 5vw 69vw 25vw;
-      font-family: Arial, Helvetica, sans-serif;
-      color: rgb(255, 255, 255);
-    }
-    .Item-1 {
-      background-color: rgb(44, 44, 44);
-        display: grid;
-        align-items: center;
-    }
-    .Item-2 {
-      background-color: rgb(44, 44, 44);
-        display: grid;
-        align-items:center;
-        min-height: 10vh;
-    }
-    .Item-3 {
-      background-color: rgb(44, 44, 44);
-        display: grid;
-        justify-content: center;
-        align-items: center;
-    }
-    .Item-4 {
-      background-color: rgb(53, 53, 53);
-      display: grid;
-      align-items: center;
-      justify-content: center;
-      grid-auto-rows: 5vh;
-    }
-    .Item-5 {
-      background-color: rgb(0, 0, 0);
-      display: grid;
-      grid-auto-rows: 4vh;
-    }
-    .Item-6 {
-      display:grid;
-      grid-template-rows: 3vh 3vh 79vh 5vh;
-    }
-    .Email { 
-      background-color: rgb(27, 27, 27);
-      color: rgb(124, 124, 124);
-      text-align: left;
-      white-space: nowrap;
-      width: 100%;
-      height: 4vh;
-      font-size: auto;
-      overflow: hidden;
-    }
-    .tab {
-      background-color: rgb(105, 105, 105);
-      width: 4vw;
-      height: 4vh;
-      font-size: auto;
-      overflow: hidden;
-      color: rgb(189, 189, 189);
-    }
-    .input {
-      min-width: 20vw;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: rgb(41, 41, 41);
-      color: rgb(151, 150, 150);
-    }
-</style>
-
 <html>
-<body class="container">
-    <!-- Variables -->
+<head class="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tab Name -->
+    <title>The Den Email</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <!-- Styling -->
+    <link rel="stylesheet" href="Style.css">
+    <!-- Script stuff -->
+    <script src="JavaScript.JS"></script>
+</head>
 
-    <!--Row 1 -->
-    <div class="Item-1">The Den Email</div>
-    <!-- search grid -->
-    <div class="Item-2">
-      <input type="text" placeholder="Search" class="input">
-    </div>
-    <!-- Settings Corner-->
-    <div class="Item-3">
-      <div> <button class="tab"> Compose</button>
-        <button class="tab"> Settings</button> 
-        <button class="tab"> Sign Out</button></div>
-    </div>
-
-    <!--Row 2 -->
-    <!-- Categories grid-->
-    <div class="Item-4">
-      <button class="tab"> Inbox</button>
-      <button class="tab"> Updates</button>
-      <button class="tab"> Social</button>
-      <button class="tab"> Finnancial</button>
-      <button class="tab"> Work</button>
-    </div>
-    <!-- Email List -->
-    <div class="Item-5">
-      <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
-        data-sender="SketchyInsurance" value="Limited time offer! Car loans being offered at intrest rate of 10000%!" 
-        >Car loans approved fast! Click for more info </button> </div>
-
-      <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
-        data-sender="ElectionGuy" value="Time is running out and we need your vote. Vote today! We are running out of time and can use your vote to defeat  Raffle Flaffle in running for relection."
-        >Mr Snuffle Puff is counting on you for his vote, do you have what it takes? </button> </div>
+<body >
+  <!-- Row 1 -->
+<div>
+  <nav class="navbar navbar-expand-lg Row-1">
+    <div class="container-fluid">
+        <!-- header -->
+        <a class="navbar-brand header">The Den Email</a>
+        <!-- Hamburger Button -->
+        <button class="navbar-toggler collapse-button" type="button" data-toggle="collapse" data-target="#navbarID"
+            aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         
-      <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
-        data-sender="NigerianPrinceScam" value=" <!Scam Alert!> The Nigerian prince scam is a type of advance-fee scam, which is named after Section 419 of the Nigerian Criminal Code. The goal of these scams is to gain access to your personal information or infect your device with malware. With access to your email, a hacker can impersonate you and commit identity theft.<!Scam Alert!> Content Deleted"
-        >Hello I'm a nigerian prince in dire need of finnanical help. please, my family </button> </div>
+        <!-- Serach Input -->
+        <input type="text" placeholder="Search" class="search-input">
     </div>
-    <!-- Email View/Create-->
-    <div class="Item-6">
-      <input placeholder="Title" class="input" id="title">
-      <input placeholder="Recipients" class="input" id="contacts">
-      <textarea placeholder="Content" class="input" id="content"></textarea>
-      <div> 
-        <button class="tab" onclick="clearComposeGrid()"> Reply</button> 
-        <button class="tab" onclick="deleteEmail()"> Delete </button> 
-        <button class="tab"> Forward</button></div>
+
+    <!-- Content that goes into hamburger column -->
+    <div class="collapse navbar-collapse collapse-button-content" id="navbarID">
+      <div class="navbar-nav collapse-button-content">
+          <button class="tab"> Compose</button>
+          <button class="tab"> Settings</button> 
+          <button class="tab"> Sign Out</button></div>
+      </div>
     </div>
+</nav>
+</div>
+
+<!--Row 2 -->
+
+<div class="body">
+  <!-- Categories grid-->
+  <div class="Item-4">
+    <button class="tab"> Inbox</button>
+    <button class="tab"> Updates</button>
+    <button class="tab"> Social</button>
+    <button class="tab"> Finnancial</button>
+    <button class="tab"> Work</button>
+  </div>
+
+  <!-- Email List -->
+  <div class="Item-5">
+    <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
+      data-sender="SketchyInsurance" value="Limited time offer! Car loans being offered at intrest rate of 10000%!" 
+      >Car loans approved fast! Click for more info </button> </div>
+
+    <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
+      data-sender="ElectionGuy" value="Time is running out and we need your vote. Vote today! We are running out of time and can use your vote to defeat  Raffle Flaffle in running for relection."
+      >Mr Snuffle Puff is counting on you for his vote, do you have what it takes? </button> </div>
+      
+    <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
+      data-sender="NigerianPrinceScam" value=" <!Scam Alert!> The Nigerian prince scam is a type of advance-fee scam, which is named after Section 419 of the Nigerian Criminal Code. The goal of these scams is to gain access to your personal information or infect your device with malware. With access to your email, a hacker can impersonate you and commit identity theft.<!Scam Alert!> Content Deleted"
+      >Hello I'm a nigerian prince in dire need of finnanical help. please, my family </button> </div>
+  </div>
+
+  <!-- Email View/Create-->
+  <div class="Item-6">
+    <input placeholder="Title" class="composeEmail" id="title">
+    <input placeholder="Recipients" class="composeEmail" id="contacts">
+    <textarea placeholder="Content" class="composeEmail" id="content"></textarea>
+    <div> 
+      <button class="tab" onclick="clearComposeGrid()"> Reply</button> 
+      <button class="tab" onclick="deleteEmail()"> Delete </button> 
+      <button class="tab"> Forward</button></div>
+  </div>
+</div>
 </body>
-<!-- Scripts for functions -->
-<script> 
-/* Change compose grid title */
-  function changeTitle(button) {
-    const inputField = document.getElementById("title");
-    inputField.value = button.textContent;
-  }
-  /* Add recipients in compose grid to self */
-  function changeRecipientsReciever() {
-    const inputField = document.getElementById("contacts");
-    inputField.value += "example@me.com";
-  }
-  /* Add sender before reciever */
-  function changeRecipientsSender(button) {
-    const inputField = document.getElementById("contacts");
-    inputField.value = button.dataset.sender + " to ";
-  }
-  /* Change content to of email */
-  function changeContent(button) {
-    const inputField = document.getElementById("content");
-    inputField.value = button.value;
-  }
-  /* Clear compose grid inputs */
-  function clearComposeGrid() {
-    const titleInput = document.getElementById("title");
-    titleInput.value = "";
-    const contactsInput = document.getElementById("contacts");
-    contactsInput.value = "";
-    const contentInput = document.getElementById("content");
-    contentInput.value = "";
-  }
-</script>
 </html>

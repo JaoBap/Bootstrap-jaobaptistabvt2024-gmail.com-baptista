@@ -45,3 +45,11 @@ Created drafts for responsitity.
 - Clicking categories loads different email lists
 - Search box works
 Finished clicking email to show up in correct grids
+
+11/12/2024
+5:30PM - 8:30PM
+Learned new bootstrap elements
+refined entire top part of layout
+added navbar with collapase options depending on screen size
+changed layout
+decided on creating new draft next session. Will be more easily accessible.

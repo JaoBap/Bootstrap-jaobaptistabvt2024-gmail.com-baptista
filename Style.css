@@ -1,0 +1,139 @@
+    .row-2 {
+      background-color: rgb(0, 0, 0);
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns:155px 550px 400px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(255, 255, 255);
+    }
+    .header {
+      color: rgb(0, 0, 0);
+    }
+    .Row-1 {
+      background-color: rgb(44, 44, 44);
+    }
+    .collapse-button {
+        background-color: rgb(27, 27, 27);
+        border-color: rgb(0, 0, 0);
+        width: 40px;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .collapse-button-content{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 10px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .search-Input {
+        Width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(41, 41, 41);
+      color: rgb(151, 150, 150);
+    }
+    .Item-1 {
+      background-color: rgb(44, 44, 44);
+        display: grid;
+        align-items: center;
+    }
+    .Item-2 {
+      background-color: rgb(44, 44, 44);
+        display: grid;
+        align-items:center;
+        min-height: 10px;
+    }
+    .Item-3 {
+      background-color: rgb(44, 44, 44);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .Item-4 {
+      background-color: rgb(53, 53, 53);
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-auto-rows: 40px;
+    }
+    .Item-5 {
+      background-color: rgb(0, 0, 0);
+      display: grid;
+      grid-auto-rows: 40px;
+    }
+    .Item-6 {
+      display:grid;
+      grid-template-rows: 3vh 3vh 79vh 5vh;
+    }
+    .Email { 
+      background-color: rgb(27, 27, 27);
+      color: rgb(124, 124, 124);
+      text-align: left;
+      white-space: nowrap;
+      width: 100%;
+      height: 40px;
+      font-size: auto;
+      overflow: hidden;
+    }
+    .tab {
+      background-color: rgb(105, 105, 105);
+      width: 80px;
+      height: 30px;
+      font-size: 15px;
+      overflow: hidden;
+      color: rgb(189, 189, 189);
+    }
+    .input {
+      Width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(41, 41, 41);
+      color: rgb(151, 150, 150);
+    }
+    .composeEmail {
+        Width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(41, 41, 41);
+      color: rgb(151, 150, 150);
+    }
+
+row-2::before {
+  content: "XS";
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: 576px) {
+    row-2::before {
+    content: "SM";
+  }
+}
+
+@media (min-width: 768px) {
+    row-2::before {
+    content: "MD";
+  }
+}
+
+@media (min-width: 992px) {
+    row-2::before {
+    content: "LG";
+  }
+}
+
+@media (min-width: 1200px) {
+    row-2::before {
+    content: "XL";
+  }
+}
+
+@media (min-width: 1400px) {
+    row-2::before {
+    content: "XXL";
+  }
+}
