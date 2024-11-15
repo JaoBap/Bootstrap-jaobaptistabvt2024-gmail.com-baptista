@@ -52,4 +52,24 @@ Learned new bootstrap elements
 refined entire top part of layout
 added navbar with collapase options depending on screen size
 changed layout
-decided on creating new draft next session. Will be more easily accessible.
+
+11/13/2024
+12PM - 2:30PM
+Made columns scale better
+fixed some buttons
+reply and delete buttons work a little bitter
+fixed hamburger menu
+Added forward button temp functionality
+added offcanvas bootstrap addition
+changed columns to 2 and put view email in offcanvas
+fixed sizing width
+Added semi functional send button
+
+11/14/2024
+12:30PM-1PM
+Added button to open offcanvas
+Fixed emails going off screen
+2PM-3PM
+Research ways to prevent text from overflowing off screen
+Prevented email buttons from going off screen to right.
+Fixed dynamic scaling to prevent off screen scroll bars when content is not overflwoing

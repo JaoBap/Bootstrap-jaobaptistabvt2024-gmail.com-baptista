@@ -1,16 +1,41 @@
-    .row-2 {
-      background-color: rgb(0, 0, 0);
-      display: grid;
-      grid-template-rows: auto;
-      grid-template-columns:155px 550px 400px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: rgb(255, 255, 255);
+    .body {
+      height: 100%;
+    }
+    .background {
+      background-color: black;
+    }
+    .background-grey {
+      background-color: rgb(43, 43, 43);
+    }
+    .tab {
+      background-color: rgb(105, 105, 105);
+      width: 80px;
+      height: 40px;
+      font-size: 15px;
+      overflow: hidden;
+      color: rgb(189, 189, 189);
     }
     .header {
       color: rgb(0, 0, 0);
     }
     .Row-1 {
       background-color: rgb(44, 44, 44);
+    }
+    .navbar {
+      height: 90px;
+    }
+    .navbar .containerfluid {
+      flex-direction: column;
+    }
+    
+    /* 2nd row */
+    .Row-2 {
+      background-color: rgb(0, 0, 0);
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      height: calc(100vh - 90px);
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(255, 255, 255);
     }
     .collapse-button {
         background-color: rgb(27, 27, 27);
@@ -51,40 +76,50 @@
         justify-content: center;
         align-items: center;
     }
+    /* 1st column */
     .Item-4 {
       background-color: rgb(53, 53, 53);
       display: grid;
       align-items: center;
       justify-content: center;
-      grid-auto-rows: 40px;
+      grid-auto-rows: 70px;
     }
-    .Item-5 {
+    /* 2nd Column */
+    .offcanvas-Open {
+      position: fixed;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      z-index: 10;
+      height: 60px;
+      width: 30px;
+      box-shadow: 10px;
+    }
+    .Email-List {
       background-color: rgb(0, 0, 0);
       display: grid;
+      grid-template-columns: 1fr;
       grid-auto-rows: 40px;
-    }
-    .Item-6 {
-      display:grid;
-      grid-template-rows: 3vh 3vh 79vh 5vh;
+      width: 100%;
     }
     .Email { 
       background-color: rgb(27, 27, 27);
       color: rgb(124, 124, 124);
       text-align: left;
-      white-space: nowrap;
-      width: 100%;
-      height: 40px;
       font-size: auto;
       overflow: hidden;
+      word-wrap: break-word;
+      white-space: nowrap;
+      height: 40px;
+      width: 100%;
+      box-sizing: border-box;
     }
-    .tab {
-      background-color: rgb(105, 105, 105);
-      width: 80px;
-      height: 30px;
-      font-size: 15px;
-      overflow: hidden;
-      color: rgb(189, 189, 189);
+    /* Email message off canvas */
+    .Email-Message {
+      display: flex;
+      align-items: center;
     }
+    
     .input {
       Width: 100%;
       font-family: Arial, Helvetica, sans-serif;
@@ -92,48 +127,11 @@
       color: rgb(151, 150, 150);
     }
     .composeEmail {
-        Width: 100%;
+      Width: 100%;
       font-family: Arial, Helvetica, sans-serif;
       background-color: rgb(41, 41, 41);
       color: rgb(151, 150, 150);
     }
-
-row-2::before {
-  content: "XS";
-  color: red;
-  font-size: 2rem;
-  font-weight: bold;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-
-@media (min-width: 576px) {
-    row-2::before {
-    content: "SM";
-  }
-}
-
-@media (min-width: 768px) {
-    row-2::before {
-    content: "MD";
-  }
-}
-
-@media (min-width: 992px) {
-    row-2::before {
-    content: "LG";
-  }
-}
-
-@media (min-width: 1200px) {
-    row-2::before {
-    content: "XL";
-  }
-}
-
-@media (min-width: 1400px) {
-    row-2::before {
-    content: "XXL";
-  }
-}
+    .EmailContent{
+      height: 86%;
+    }

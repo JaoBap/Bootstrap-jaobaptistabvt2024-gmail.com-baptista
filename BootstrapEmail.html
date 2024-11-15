@@ -4,81 +4,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Tab Name -->
     <title>The Den Email</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Styling -->
     <link rel="stylesheet" href="Style.css">
     <!-- Script stuff -->
     <script src="JavaScript.JS"></script>
 </head>
 
-<body >
+<body class="background body">
+  <!-- button for opening offcanvas view email -->
+<button class="tab offcanvas-open" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"><</button>
+
   <!-- Row 1 -->
 <div>
   <nav class="navbar navbar-expand-lg Row-1">
     <div class="container-fluid">
         <!-- header -->
-        <a class="navbar-brand header">The Den Email</a>
+        <a class="navbar-brand header">The Den: </a>
+        <a class="navbar-brand header">MyExampleEmail@TheDen.com</a>
         <!-- Hamburger Button -->
-        <button class="navbar-toggler collapse-button" type="button" data-toggle="collapse" data-target="#navbarID"
+        <button class="navbar-toggler collapse-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID"
             aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         
         <!-- Serach Input -->
-        <input type="text" placeholder="Search" class="search-input">
+        <input type="text" placeholder="Search" class="search-input" tabindex="1">
     </div>
 
     <!-- Content that goes into hamburger column -->
     <div class="collapse navbar-collapse collapse-button-content" id="navbarID">
       <div class="navbar-nav collapse-button-content">
-          <button class="tab"> Compose</button>
           <button class="tab"> Settings</button> 
           <button class="tab"> Sign Out</button></div>
       </div>
     </div>
-</nav>
+  </nav>
 </div>
 
 <!--Row 2 -->
+<div class="Row-2">
 
-<div class="body">
   <!-- Categories grid-->
   <div class="Item-4">
     <button class="tab"> Inbox</button>
     <button class="tab"> Updates</button>
-    <button class="tab"> Social</button>
+    <button class="tab"> Trash</button>
     <button class="tab"> Finnancial</button>
     <button class="tab"> Work</button>
   </div>
 
   <!-- Email List -->
-  <div class="Item-5">
-    <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
-      data-sender="SketchyInsurance" value="Limited time offer! Car loans being offered at intrest rate of 10000%!" 
+  <div class="Email-List text-truncate">
+    <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this);" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+      data-sender="SketchyInsurance@what.com" value="Limited time offer! Car loans being offered at intrest rate of 10000%!" 
       >Car loans approved fast! Click for more info </button> </div>
 
-    <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
-      data-sender="ElectionGuy" value="Time is running out and we need your vote. Vote today! We are running out of time and can use your vote to defeat  Raffle Flaffle in running for relection."
-      >Mr Snuffle Puff is counting on you for his vote, do you have what it takes? </button> </div>
+    <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this);" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+      data-sender="ElectionGuy@ewwpolitics.com" value="Time is running out and we need your vote. Vote today! We are running out of time and can use your vote to defeat  Raffle Flaffle in running for relection."
+      >Mr Snuffle Puff is counting on you for his vote, do you have what it takes? </button> </div> 
       
-    <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this); changeRecipientsReciever()" 
-      data-sender="NigerianPrinceScam" value=" <!Scam Alert!> The Nigerian prince scam is a type of advance-fee scam, which is named after Section 419 of the Nigerian Criminal Code. The goal of these scams is to gain access to your personal information or infect your device with malware. With access to your email, a hacker can impersonate you and commit identity theft.<!Scam Alert!> Content Deleted"
+    <div> <button class="Email" onclick="changeTitle(this); changeRecipientsSender(this); changeContent(this);" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+      data-sender="NigerianPrinceScam@hmm.com" value=" <!Scam Alert!> The Nigerian prince scam is a type of advance-fee scam, which is named after Section 419 of the Nigerian Criminal Code. The goal of these scams is to gain access to your personal information or infect your device with malware. With access to your email, a hacker can impersonate you and commit identity theft.<!Scam Alert!> Content Deleted"
       >Hello I'm a nigerian prince in dire need of finnanical help. please, my family </button> </div>
   </div>
 
-  <!-- Email View/Create-->
-  <div class="Item-6">
-    <input placeholder="Title" class="composeEmail" id="title">
-    <input placeholder="Recipients" class="composeEmail" id="contacts">
-    <textarea placeholder="Content" class="composeEmail" id="content"></textarea>
-    <div> 
-      <button class="tab" onclick="clearComposeGrid()"> Reply</button> 
-      <button class="tab" onclick="deleteEmail()"> Delete </button> 
-      <button class="tab"> Forward</button></div>
-  </div>
-</div>
+  <!-- OffCanvas for Email View/Create-->
+    <div class="offcanvas offcanvas-end background" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+      <!-- Off canvas header -->
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel"> </h5>
+        <!-- Buttons for email message -->
+        <div class="Email-Message"> 
+          <button class="tab" onclick="clearComposeGridReply()"> Reply </button> 
+          <button class="tab" onclick="deleteEmail()" data-bs-dismiss="offcanvas"> Delete </button> 
+          <button class="tab" onclick="clearComposeGridForward()"> Forward </button>
+        </div>
+        <!-- Off canvas btn to close -->
+        <button type="button" class="btn-close background-grey" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <!-- Content in off canvas-->
+      <div class="offcanvas-body">
+        <!-- Inputs -->
+        <input placeholder="Title" class="composeEmail" id="title">
+        <input placeholder="From / To" class="composeEmail" id="contacts">
+        <textarea placeholder="Content" class="composeEmail EmailContent" id="content"></textarea>
+        <!-- Send BTN -->
+         <button class="tab" onclick="sendEmail()" data-bs-dismiss="offcanvas"> Send </button>
+      </div>
+    </div>
 </body>
 </html>
